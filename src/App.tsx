@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Button from './Button';
 import LoginForm from './LoginForm';
+import TodosApp from './TodoApp';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <div className="grid w-screen place-items-center">
         <LoginForm onSubmit={(credentials) => window.alert(`Submitted data: ${JSON.stringify(credentials)}`)} />
       </div>
+      <h2 className='text-2xl m-6 mt-12'> useCallback Demo </h2>
+      <TodosApp/>
     </div>
   );
 }
