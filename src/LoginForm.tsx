@@ -15,6 +15,7 @@ type LoginFormProps = {
 
 function LoginForm(props: LoginFormProps) {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const data = new FormData(event.currentTarget);
     props.onSubmit({
       username: String(data.get('username')),
